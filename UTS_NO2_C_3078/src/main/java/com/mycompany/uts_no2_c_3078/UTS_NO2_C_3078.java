@@ -15,17 +15,28 @@ public class UTS_NO2_C_3078 {
 
     public static void main(String[] args) {
 
-        SalariedEmployee S = new SalariedEmployee("Cinta", 21103078, 3000000);
-        CommissionEmployee C = new CommissionEmployee("Andi", 21103078, 3500000, 1000000, 20);
-        ProjectPlanner P = new ProjectPlanner("Budi", 2130223, 4000000, 2000000, 120);
+        //Perujukan instance kelas ke instance lain
+        SalariedEmployee_3078 S_3078;
+        CommissionEmployee_3078 C_3078;
+        ProjectPlanner_3078 P_3078;
         
-        System.out.println("== DATA PEGAWAI PERUSAHAAN ==");
-        S.cetakSalariedEmployee();
-        System.out.println("");
-        C.cetakCommisionEmployee();
-        System.out.println("");
-        P.cetakProjectPlanner();
-        System.out.println("");
+        //Pembuatan objek dan pengisian data melalu konstruktor
+        S_3078 = new SalariedEmployee_3078("Adi Sucipto", 20201212, 1000000);
+        C_3078 = new CommissionEmployee_3078("Andi Fernanda", 20191313, 3500000, 100000, 20);
+        P_3078 = new ProjectPlanner_3078("Budi Fernandes", 20181414, 3600000, 200000, 25);
+        
+        //Pemanggilan data pegawai dari setiap kelas
+        System.out.println("\n===== DATA PEGAWAI PERUSAHAAN =====");
+        
+        System.out.println("\n----- Salaried Employee -----");
+        S_3078.cetakSalariedEmployee_3078();
+        
+        System.out.println("----- Commission Employee -----");
+        C_3078.cetakCommisionEmployee_3078();
+        
+        System.out.println("----- Project Planner -----");
+        P_3078.cetakProjectPlanner_3078();
         
     }
+    
 }
